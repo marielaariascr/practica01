@@ -29,11 +29,13 @@ public class ArbolServiceImpl implements ArbolService {
     }
 
     @Override
+    @Transactional
     public void save(Arbol arbol) {
         arbolDao.save(arbol);
     }
 
     @Override
+    @Transactional
     public void delete(Arbol arbol) {
         arbolDao.delete(arbol);
     }
