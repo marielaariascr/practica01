@@ -8,8 +8,10 @@ import java.util.List;
 
 public interface ArbolService {
     
+    // Retorna una lista de categorias (activas o todas)
+    public List<Arbol> getArboles();
     //retorna una categoria por ID
-    public Arbol getCategoria(Arbol arbol);
+    public Arbol getArbol(Arbol arbol);
     
     //se inserta un nuevo registro si el ID de la categoria esta vacio
     //se actualiza el registro si el ID de la categoria no esta vacio.

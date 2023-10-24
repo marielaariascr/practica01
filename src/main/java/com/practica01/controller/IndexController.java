@@ -13,13 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author mariassuarez
  */
 @Controller
-@RequestMapping("/")
 public class IndexController {
-    
+
     @RequestMapping("/")
     public String page(Model model) {
         model.addAttribute("attribute", "value");
         return "index";
+        //Test
     }
-    
 }

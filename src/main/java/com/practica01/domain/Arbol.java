@@ -17,7 +17,6 @@ public class Arbol implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id_arbol") //opcional si abajo es distinto nombre
     private Long idArbol; // El Hibernate lo transforma en id_categoria por 
     private String tipoArbol;
     private String nombreComun;
