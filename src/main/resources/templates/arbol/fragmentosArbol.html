@@ -152,9 +152,33 @@
                                             </div>
                                             <div class="card-body">
                                                 <div class="mb-3">
-                                                    <label for="descripcion">[[#{arbol.descripcion}]]</label>
+                                                    <label for="nombreComun">[[#{arbol.nombreComun}]]</label>
                                                     <input type="text" class="form-control" 
-                                                           name="descripcion" th:field="*{descripcion}"
+                                                           name="nombreComun" th:field="*{nombreComun}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="tipoArbol">[[#{arbol.tipoArbol}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="tipoArbol" th:field="*{tipoArbol}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="tipoFlor">[[#{arbol.tipoFlor}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="tipoFlor" th:field="*{tipoFlor}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="dureza">[[#{arbol.dureza}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="dureza" th:field="*{dureza}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="altura">[[#{arbol.altura}]]</label>
+                                                    <input type="number" class="form-control" 
+                                                           name="altura" th:field="*{altura}"
                                                            required="true">
                                                 </div>
                                                 <div class="mb-3">
