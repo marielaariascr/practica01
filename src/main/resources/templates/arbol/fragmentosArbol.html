@@ -7,7 +7,7 @@
     </head>
     <body>
         <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal-->
-        <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
+        <section th:fragment="botonesAgregar" class="py-4 mb-4">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">   
@@ -40,8 +40,24 @@
                               method="POST" class="was-validated" enctype="multipart/form-data">
                             <div class="modal-body">
                                 <div class="mb-3">
-                                    <label for="descripcion">[[#{arbol.descripcion}]]</label>
-                                    <input type="text" class="form-control" name="descripcion" required="true"/>
+                                    <label for="descripcion">[[#{arbol.nombreComun}]]</label>
+                                    <input type="text" class="form-control" name="nombreComun" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tipoArbol">[[#{arbol.tipoArbol}]]</label>
+                                    <input type="text" class="form-control" name="tipoArbol" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tipoFlor">[[#{arbol.tipoFlor}]]</label>
+                                    <input type="text" class="form-control" name="tipoFlor" required="false"/>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="dureza">[[#{arbol.dureza}]]</label>
+                                    <input type="text" class="form-control" name="dureza" required="false"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="altura">[[#{arbol.altura}]]</label>
+                                    <input type="number" class="form-control" name="altura" required="false"/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="activo">[[#{arbol.activo}]]</label>
