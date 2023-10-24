@@ -66,7 +66,7 @@
         <section th:fragment="listadoArboles" id="arbols">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4>[[#{arbol.listado}]]</h4>
@@ -76,16 +76,23 @@
                                     <thead class="table-dark">
                                         <tr>
                                             <th>#</th>
-                                            <th>[[#{arbol.descripcion}]]</th>
-                                            <th>[[#{arbol.activo}]]</th>
+                                            <th>[[#{arbol.nombreComun}]]</th>
+                                            <th>[[#{arbol.tipoArbol}]]</th>
+                                            <th>[[#{arbol.tipoFlor}]]</th>
+                                            <th>[[#{arbol.dureza}]]</th>
+                                            <th>[[#{arbol.altura}]]</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr th:each="arbol, contador : ${arbols}">
                                             <td>[[${contador.count}]]</td>
-                                            <td>[[${arbol.descripcion}]]</td>
-                                            <td th:text="${arbol.activo} ? 'Activa' : 'Inactiva'" />
+                                            <td>[[${arbol.nombreComun}]]</td>
+                                            <td>[[${arbol.tipoArbol}]]</td>
+                                            <td>[[${arbol.tipoFlor}]]</td>
+                                            <td>[[${arbol.dureza}]]</td>
+                                            <td>[[${arbol.altura}]]</td>
+                                            <!-- <td th:text="${arbol.activo} ? 'Activo' : 'Inactiva'" /> -->
                                             <td><a th:href="@{/arbol/eliminar/}+${arbol.idArbol}"
                                                    class="btn btn-danger">
                                                     <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
@@ -99,14 +106,6 @@
                             </div>
                             <div class="text-center p-2" th:if="${arbols == null or arbols.empty}">
                                 <span>[[#{lista.vacia}]]</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card text-center bg-success text-white mb-3">
-                            <div class="card-body">
-                                <h3>[[#{arbol.total}]]</h3>
-                                <h4 class="fs-2"><i class="fas fa-users"></i> [[${totalArboles}]]</h4>
                             </div>
                         </div>
                     </div>

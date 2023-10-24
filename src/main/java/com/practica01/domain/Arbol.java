@@ -24,6 +24,7 @@ public class Arbol implements Serializable{
     private String dureza;
     private String rutaImagen;
     private Long altura;
+    private boolean activo;
     
     public Arbol() {}
 
